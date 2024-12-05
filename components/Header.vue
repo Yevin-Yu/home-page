@@ -51,6 +51,7 @@
             border-radius: 50%;
             box-sizing: border-box;
             border: 0.015rem solid var(--red-border);
+            cursor: pointer;
             img {
                 width: 0.5rem;
                 height: 0.5rem;
@@ -78,6 +79,7 @@
         width: 4rem;
         padding-right: 0.5rem;
         text-align: right;
+        cursor: pointer;
         img {
             vertical-align: middle;
             width: 1.2rem;

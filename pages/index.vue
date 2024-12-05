@@ -1,3 +1,10 @@
 <template>
-    <h1>yevin</h1>
+    <div class="home">
+        home
+    </div>
 </template>
+<style scoped>
+.home {
+    padding: 0.5rem;
+}
+</style>

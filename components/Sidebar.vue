@@ -1,11 +1,6 @@
 <template>
-    <aside>
-        <h2>侧边栏</h2>
-        <ul>
-            <li><NuxtLink to="/">首页</NuxtLink></li>
-            <li><NuxtLink to="/about">关于</NuxtLink></li>
-            <li><NuxtLink to="/contact">联系</NuxtLink></li>
-        </ul>
+    <aside class="aside">
+        侧边栏
     </aside>
 </template>
 
@@ -13,9 +8,12 @@
 
 <style scoped>
 /* 添加样式 */
-aside {
-    background: #f4f4f4;
-    padding: 1rem;
+.aside {
+    background-color: var(--bg-color-2);
+    padding: 0.5rem;
     width: 200px;
+    overflow: auto;
+    border-right: 0.015rem solid var(--border--color-1);
+    box-sizing: border-box;
 }
 </style>

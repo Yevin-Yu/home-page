@@ -2,9 +2,8 @@
 import { onMounted, onBeforeUnmount } from "vue";
 
 export function useResponsiveFontSize(): void {
-  const REM_NUM = 67.6; // 基础 16px 设计图 1080P
-  const REM_NUM_APP = 24; // 基础 16px 设计图 375P
-
+  const REM_NUM = 75; // 基础 16px 设计图 1080P
+  const REM_NUM_APP = 25; 
   const isMobileOrTablet = (): boolean => {
     const userAgent = window.navigator.userAgent;
     return /Mobi|Tablet/i.test(userAgent);
