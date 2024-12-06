@@ -36,6 +36,7 @@ onMounted(async () => {
 
     .main {
         width: calc(100% - 100px);
+        background-color: var(--bg-color-3);
     }
 }
 </style>

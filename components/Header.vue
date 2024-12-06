@@ -12,6 +12,8 @@
                 <img src="/public/image/svg/zoom.svg" alt="zoom" />
             </span>
         </div>
+        <span class="file-name">home-page</span>
+        <span class="git-name">master</span>
         <div class="title">个人主页</div>
         <div class="logo"><img src="/public/favicon.ico" alt="logo" /></div>
     </header>
@@ -29,6 +31,7 @@
     box-sizing: border-box;
     display: flex;
     font-size: 0.6rem;
+    position: relative;
     .btn {
         width: 4rem;
         margin-left: 0.5rem;
@@ -69,6 +72,17 @@
             background-color: var(--green);
             border-color: var(--green-border);
         }
+    }
+    .file-name,
+    .git-name {
+        position: absolute;
+        left: 4.5rem;
+        font-size: 0.65rem;
+        color: var(--font-color-1);
+    }
+    .git-name {
+        left: 8.5rem;
+        color: var(--font-color-2);
     }
     .title {
         text-align: center;
