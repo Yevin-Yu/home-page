@@ -1,26 +1,18 @@
 <template>
     <aside class="aside" ref="resizableDiv">
         <div class="aside-content">
-            <FileItem>
-                <FileItem />
-                <FileItem />
-                <FileItem />
-                <FileItem />
-                <FileItem />
-            </FileItem>
-            <FileItem>
-                <FileItem>
-                    <FileItem>
-                        <FileItem />
-                    </FileItem>
-                </FileItem>
-            </FileItem>
+            <FileItem v-for="menu in menus" :key="menu.id" :menu="menu" :currentMenuId="currentMenuId" />
         </div>
         <div class="resizer"></div>
     </aside>
 </template>
 
-<script setup></script>
+<script setup>
+import { storeToRefs } from "pinia"; 
+import { useMenusStore } from '@/stores/useMenusStore'
+
+const { menus, currentMenuId } = storeToRefs(useMenusStore())      
+</script>
 
 <style scoped>
 /* 添加样式 */
@@ -32,14 +24,16 @@
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
+
     .aside-content {
         width: calc(100% - 0.2rem);
         height: 100%;
         overflow: auto;
         scrollbar-width: thin;
         scrollbar-color: var(--bg-color-0) transparent;
-        padding: 0.2rem;
+        padding: 0;
     }
+
     .resizer {
         width: 0.2rem;
         height: 100%;

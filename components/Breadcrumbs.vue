@@ -30,7 +30,7 @@
             border-right: 0.015rem solid var(--border--color-1);
             &.active {
                 position: relative;
-                top: 0.015rem;
+                top: 1px;
                 background-color: var(--bg-color-3);
             }
         }
