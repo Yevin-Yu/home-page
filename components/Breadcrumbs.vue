@@ -6,7 +6,7 @@ import { storeToRefs } from "pinia";
 import { useMenusStore } from "@/stores/useMenusStore";
 
 const { menus, currentMenuId } = storeToRefs(useMenusStore());
-// 获取路径
+// 获取当前路径
 const pathName = ref("");
 const findFullPathById = (menus, id, currentPath = []) => {
     for (const menu of menus) {
@@ -23,7 +23,7 @@ const findFullPathById = (menus, id, currentPath = []) => {
     }
     return null;
 };
-
+// 监听菜单变化
 watchEffect(() => {
     if (currentMenuId.value && menus.value.length) {
         pathName.value = findFullPathById(menus.value, currentMenuId.value);

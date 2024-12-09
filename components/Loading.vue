@@ -1,7 +1,7 @@
 <template>
     <div v-if="isLoading" class="loading-overlay">
         <div class="loading-spinner">
-            <p>Loading...</p>
+            <p>HomePage Loading...</p>
         </div>
     </div>
 </template>
@@ -31,5 +31,6 @@ const props = defineProps({
 
 .loading-spinner {
     font-size: 1rem;
+    color: var(--font-color-2);
 }
 </style>

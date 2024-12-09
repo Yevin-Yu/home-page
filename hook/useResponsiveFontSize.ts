@@ -1,9 +1,9 @@
 // useResponsiveFontSize.ts
 import { onMounted, onBeforeUnmount } from "vue";
-
+// 根据屏幕宽度调整根元素的字体大小
 export function useResponsiveFontSize(): void {
   const REM_NUM = 75; // 基础 16px 设计图 1080P
-  const REM_NUM_APP = 25; 
+  const REM_NUM_APP = 25;
   const isMobileOrTablet = (): boolean => {
     const userAgent = window.navigator.userAgent;
     return /Mobi|Tablet/i.test(userAgent);

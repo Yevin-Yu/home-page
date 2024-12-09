@@ -6,9 +6,6 @@
         </div>
     </footer>
 </template>
-
-<script setup></script>
-
 <style scoped>
 .footer {
     height: 1.5rem;

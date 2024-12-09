@@ -28,7 +28,6 @@ const router = useRouter();
 const openMenu = (item) => {
     router.push(item.path);
     setCurrentMenuId(item.id);
-    console.log('123123')
 };
 </script>
 <style scoped>

@@ -3,13 +3,13 @@
         <!-- 关闭 最小化 缩放 -->
         <div class="btn">
             <span class="close-btn">
-                <img src="/public/image/svg/close.svg" alt="close" />
+                <img src="/image/svg/close.svg" alt="close" />
             </span>
             <span class="min-btn">
-                <img src="/public/image/svg/min.svg" alt="min" />
+                <img src="/image/svg/min.svg" alt="min" />
             </span>
             <span class="zoom-btn">
-                <img src="/public/image/svg/zoom.svg" alt="zoom" />
+                <img src="/image/svg/zoom.svg" alt="zoom" />
             </span>
         </div>
         <span class="file-name">home-page</span>
@@ -32,14 +32,17 @@
     display: flex;
     font-size: 0.6rem;
     position: relative;
+
     .btn {
         width: 4rem;
         margin-left: 0.5rem;
+
         &:hover .close-btn img,
         &:hover .min-btn img,
         &:hover .zoom-btn img {
             display: inline-block;
         }
+
         .close-btn,
         .min-btn,
         .zoom-btn {
@@ -55,6 +58,7 @@
             box-sizing: border-box;
             border: 0.015rem solid var(--red-border);
             cursor: pointer;
+
             img {
                 width: 0.5rem;
                 height: 0.5rem;
@@ -64,15 +68,18 @@
                 display: none;
             }
         }
+
         .min-btn {
             background-color: var(--orange);
             border-color: var(--orange-border);
         }
+
         .zoom-btn {
             background-color: var(--green);
             border-color: var(--green-border);
         }
     }
+
     .file-name,
     .git-name {
         position: absolute;
@@ -80,20 +87,24 @@
         font-size: 0.65rem;
         color: var(--font-color-1);
     }
+
     .git-name {
         left: 8.5rem;
         color: var(--font-color-2);
     }
+
     .title {
         text-align: center;
         flex: 1;
         color: var(--font-color-2);
     }
+
     .logo {
         width: 4rem;
         padding-right: 0.5rem;
         text-align: right;
         cursor: pointer;
+
         img {
             vertical-align: middle;
             width: 1.2rem;
