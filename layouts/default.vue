@@ -6,6 +6,7 @@
         <div class="content">
             <Sidebar />
             <main class="main">
+                <NavTabs />
                 <Breadcrumbs />
                 <NuxtPage />
             </main>
@@ -28,14 +29,12 @@ onMounted(async () => {
 .home-page {
     width: 100%;
     height: 100%;
-
     .content {
         height: calc(100% - 3.5rem);
         display: flex;
     }
-
     .main {
-        width: calc(100% - 100px);
+        width: calc(100% - 12rem);
         background-color: var(--bg-color-3);
     }
 }

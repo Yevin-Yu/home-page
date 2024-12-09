@@ -8,10 +8,9 @@
 </template>
 
 <script setup>
-import { storeToRefs } from "pinia"; 
+import { storeToRefs } from "pinia";
 import { useMenusStore } from '@/stores/useMenusStore'
-
-const { menus, currentMenuId } = storeToRefs(useMenusStore())      
+const { menus, currentMenuId } = storeToRefs(useMenusStore())
 </script>
 
 <style scoped>
