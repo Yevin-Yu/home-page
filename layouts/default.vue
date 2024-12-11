@@ -1,5 +1,7 @@
 <!-- layouts/default.vue -->
 <template>
+    <!-- svg 引入-->
+    <Svg />
     <Loading :isLoading="isLoading" />
     <div class="home-page">
         <Header />
