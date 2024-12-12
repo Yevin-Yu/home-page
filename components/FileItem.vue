@@ -1,7 +1,9 @@
 <template>
     <div class="file-item" :style="mainStyle">
         <div class="content" @click="openMenu">
-            <img :src="menu.expand ? menu.activeIcon : menu.icon" alt="file" />
+            <svg class="icon">
+                <use :xlink:href="menu.expand ? menu.activeIcon : menu.icon"></use>
+            </svg>
             <span> {{ menu.name }} </span>
         </div>
         <FileItem
@@ -71,11 +73,12 @@ const openMenu = () => {
         line-height: 1.5rem;
         font-size: 0.6rem;
 
-        img {
-            height: 1rem;
-            width: 1rem;
+        .icon {
+            height: 1.2rem;
+            width: 1.2rem;
             margin-right: 0.2rem;
-            vertical-align: middle;
+            vertical-align: bottom;
+            position: relative;
         }
     }
 

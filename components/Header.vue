@@ -3,13 +3,19 @@
         <!-- 关闭 最小化 缩放 -->
         <div class="btn">
             <span class="close-btn">
-                <img src="/image/svg/close.svg" alt="close" />
+                <svg class="icon">
+                    <use xlink:href="#icon-close"></use>
+                </svg>
             </span>
             <span class="min-btn">
-                <img src="/image/svg/min.svg" alt="min" />
+                <svg class="icon">
+                    <use xlink:href="#icon-min"></use>
+                </svg>
             </span>
             <span class="zoom-btn">
-                <img src="/image/svg/zoom.svg" alt="zoom" />
+                <svg class="icon">
+                    <use xlink:href="#icon-zoom"></use>
+                </svg>
             </span>
         </div>
         <span class="file-name">home-page</span>
@@ -37,9 +43,9 @@
         width: 4rem;
         margin-left: 0.5rem;
 
-        &:hover .close-btn img,
-        &:hover .min-btn img,
-        &:hover .zoom-btn img {
+        &:hover .close-btn .icon,
+        &:hover .min-btn .icon,
+        &:hover .zoom-btn .icon {
             display: inline-block;
         }
 
@@ -50,7 +56,7 @@
             background-color: var(--red);
             width: 0.7rem;
             height: 0.7rem;
-            line-height: 0.8rem;
+            line-height: 0.7rem;
             vertical-align: middle;
             margin: 0 0.2rem;
             text-align: center;
@@ -58,13 +64,13 @@
             box-sizing: border-box;
             border: 0.015rem solid var(--red-border);
             cursor: pointer;
-
-            img {
-                width: 0.5rem;
-                height: 0.5rem;
-                top: -0.02rem;
-                box-sizing: border-box;
+            position: relative;
+            .icon {
+                width: 0.7rem;
+                height: 0.7rem;
                 position: relative;
+                top: 0.07rem;
+                left: 0.05rem;
                 display: none;
             }
         }

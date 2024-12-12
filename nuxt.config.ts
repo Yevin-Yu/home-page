@@ -8,5 +8,9 @@ export default defineNuxtConfig({
     "@/assets/css/normalize.css", // 样式重制
     "@/assets/css/base.css", // 全局样式
     "@/assets/css/root.css", // 样式主题
+    'github-markdown-css/github-markdown.css'
   ],
+  modules:[
+    '@nuxt/content'
+  ]
 });

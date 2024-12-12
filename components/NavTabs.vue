@@ -9,11 +9,9 @@
                 class="tab-item"
             >
                 {{ item.name }}
-                <img
-                    @click.stop="closeCurrentTab(item)"
-                    src="/image/svg/close.svg"
-                    alt="close"
-                />
+                <svg class="icon" @click.stop="closeCurrentTab(item)">
+                    <use xlink:href="#icon-close"></use>
+                </svg>
             </li>
         </ul>
     </div>
@@ -55,16 +53,16 @@ const openMenu = (item) => {
                 top: 1px;
                 background-color: var(--bg-color-3);
             }
-            &:hover img {
+            &:hover .icon {
                 display: inline-block;
             }
-            img {
+            .icon {
                 height: 0.5rem;
                 width: 0.5rem;
                 display: none;
                 position: absolute;
                 right: 0.5rem;
-                top: 0.55rem;
+                top: 0.65rem;
             }
         }
     }

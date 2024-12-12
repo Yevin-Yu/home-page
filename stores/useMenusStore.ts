@@ -13,26 +13,56 @@ interface NavItem {
   path?: string;
 }
 
-
 const menusaData = [
   {
-    id: 1, name: "home-page", icon: "/image/svg/file.svg", activeIcon: "/image/svg/file-open.svg", type: 1, expand: true,
+    id: 1,
+    name: "home-page",
+    icon: "#icon-file",
+    activeIcon: "#icon-file-open",
+    type: 1,
+    expand: true,
     child: [
       {
-        id: 11, name: "个人主页", icon: "/image/svg/file.svg", activeIcon: "/image/svg/file-open.svg", type: 1, expand: true,
+        id: 11,
+        name: "个人主页",
+        icon: "#icon-file",
+        activeIcon: "#icon-file-open",
+        type: 1,
+        expand: true,
         child: [
-          { id: 111, name: "home.html", icon: "/image/svg/html.svg", type: 2, path: "/", },
-          { id: 112, name: "connect.html", icon: "/image/svg/html.svg", type: 2, path: "/connect", },
-          { id: 113, name: "cv.md", icon: "/image/svg/md.svg", type: 2, path: "/cv", },
+          {
+            id: 111,
+            name: "home.html",
+            icon: "#icon-html",
+            type: 2,
+            path: "/",
+          },
+          // {
+          //   id: 112,
+          //   name: "connect.html",
+          //   icon: "#icon-html",
+          //   type: 2,
+          //   path: "/connect",
+          // },
+          // {
+          //   id: 113,
+          //   name: "cv.md",
+          //   icon: "#icon-md",
+          //   type: 2,
+          //   path: "/cv",
+          // },
         ],
       },
       {
-        id: 14, name: "About.md", icon: "/image/svg/md.svg", type: 2, path: "/about",
+        id: 14,
+        name: "about.md",
+        icon: "#icon-md",
+        type: 2,
+        path: "/about",
       },
     ],
   },
 ];
-
 
 // menusStores 主方法
 export const useMenusStore = defineStore("menus", () => {
@@ -43,7 +73,7 @@ export const useMenusStore = defineStore("menus", () => {
   const currentMenuId = ref(111);
   const tabList = ref<NavItem[]>([]);
   // 初始化数据
-  menus.value = menusaData
+  menus.value = menusaData;
 
   // 设置当前菜单
   function setCurrentMenuId(id: number) {
@@ -58,9 +88,9 @@ export const useMenusStore = defineStore("menus", () => {
       const last = tabList.value[tabList.value.length - 1];
       if (last && last.path) {
         currentMenuId.value = last.id;
-        router.push(last.path);  // 跳转到最后一个
+        router.push(last.path); // 跳转到最后一个
       } else {
-        router.push("/");         // 跳转默认主页
+        router.push("/"); // 跳转默认主页
         setCurrentMenuId(111);
       }
     }
@@ -97,7 +127,11 @@ export const useMenusStore = defineStore("menus", () => {
 });
 
 // 查询方法
-function findValueById<T extends object>(obj: T | Array<T>, key: string, value: any,): T | null {
+function findValueById<T extends object>(
+  obj: T | Array<T>,
+  key: string,
+  value: any,
+): T | null {
   if (obj == null) {
     return null;
   }

@@ -10,7 +10,7 @@
             <main class="main">
                 <NavTabs />
                 <Breadcrumbs />
-                <NuxtPage />
+                <NuxtPage class="main-exit" />
             </main>
         </div>
         <Footer />
@@ -40,6 +40,12 @@ onMounted(async () => {
     .main {
         width: calc(100% - 12rem);
         background-color: var(--bg-color-3);
+        height: 100%;
+        overflow: hidden;
+        .main-exit {
+            height: calc(100% - 4.3rem);
+            overflow: auto;
+        }
     }
 }
 </style>
