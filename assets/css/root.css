@@ -8,7 +8,7 @@
     /* 字体相关 */
     --font-color-1: #242529;
     --font-color-2: #58585a;
-
+    --font-color-3: #777;
     /* 边框颜色 */
     --border--color-1: #c9c9ca;
 
@@ -19,4 +19,6 @@
     --red-border: #de605c;
     --orange-border: #dea849;
     --green-border: #2eb135;
+
+    --path-color:#0969da;
 }

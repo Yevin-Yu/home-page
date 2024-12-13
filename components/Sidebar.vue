@@ -23,7 +23,7 @@ const { menus, currentMenuId } = storeToRefs(useMenusStore())
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
-
+    z-index: 999;
     .aside-content {
         width: calc(100% - 0.2rem);
         height: 100%;
