@@ -13,7 +13,7 @@
                     </svg>
                 </div>
             </div>
-            <div class="right" :style="style">
+            <div class="right">
                 <div
                     class="card-item"
                     v-for="(item, index) in caseList"

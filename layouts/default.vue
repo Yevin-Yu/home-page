@@ -1,22 +1,24 @@
-<!-- layouts/default.vue -->
 <template>
     <!-- svg 引入-->
-    <Svg />
+    <SvgItem />
     <Loading :isLoading="isLoading" />
     <div class="home-page">
         <Header />
         <div class="content">
-            <Sidebar v-show="isShowSideBar" :style="sidebarStyle" />
+            <div ref="sideBarRef">
+                <Sidebar v-show="isShowSideBar" :style="sidebarStyle" />
+            </div>
             <main class="main" :style="mainExitStyle">
                 <NavTabs />
                 <Breadcrumbs />
                 <NuxtPage class="main-exit" />
             </main>
         </div>
-        <Footer :openSidebar="openSidebar" />
+        <div ref="footerRef">
+            <Footer :openSidebar="openSidebar" />
+        </div>
     </div>
 </template>
-
 <script setup>
 const isShowSideBar = ref(true);
 // 是否为移动端
@@ -51,6 +53,18 @@ const mainExitStyle = computed(() => {
 const openSidebar = () => {
     isShowSideBar.value = !isShowSideBar.value;
 };
+onMounted(() => {
+    document.addEventListener('click', hiddenMenuList);
+})
+const sideBarRef = ref(null)
+const footerRef = ref(null)
+const hiddenMenuList = (e) => {
+    if (!isApp.value) return
+    if (!sideBarRef.value || !footerRef.value) return
+    if (!sideBarRef.value.contains(e.target) && !footerRef.value.contains(e.target)) {
+        isShowSideBar.value = false
+    }
+}
 </script>
 <style scoped>
 .home-page {

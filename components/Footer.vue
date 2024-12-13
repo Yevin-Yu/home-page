@@ -35,9 +35,9 @@ defineProps(['openSidebar'])
             line-height: 1.8rem;
         }
         .icon{
-            margin: 0.2rem 0.5rem;
-            width: 1.2rem;
-            height: 1.2rem;
+            margin: 0.3rem 0.2rem;
+            width: 1rem;
+            height: 1rem;
             float: left;
             cursor: pointer;
         }

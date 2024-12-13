@@ -97,8 +97,8 @@
         <symbol id="icon-format" viewBox="0 0 48 48">
             <g fill="none" stroke="#000" stroke-linecap="round" stroke-width="4"><rect width="32" height="18" x="8" y="24" stroke-linejoin="round"/><path fill="#2f88ff" stroke-linejoin="round" d="M4 13H18V6H30V13H44V24H4V13Z"/><path d="M16 32L16 42"/></g>
         </symbol>
-        <symbol id="icon-list" viewBox="0 0 20 20">
-            <path fill="currentColor" d="M2.75 2a.75.75 0 0 0-.75.75v6c0 .414.336.75.75.75h2.5a.75.75 0 0 0 0-1.5H3.5V3.5h1.75a.75.75 0 0 0 0-1.5zm0 8.5a.75.75 0 0 0-.75.75v6c0 .414.336.75.75.75h2.5a.75.75 0 0 0 0-1.5H3.5V12h1.75a.75.75 0 0 0 0-1.5zm5 1.5a.75.75 0 0 0 0 1.5h9.5a.75.75 0 0 0 0-1.5zM7 15.75a.75.75 0 0 1 .75-.75h9.5a.75.75 0 0 1 0 1.5h-9.5a.75.75 0 0 1-.75-.75m0-11.5a.75.75 0 0 1 .75-.75h9.5a.75.75 0 0 1 0 1.5h-9.5A.75.75 0 0 1 7 4.25m.75 2.25a.75.75 0 0 0 0 1.5h9.5a.75.75 0 0 0 0-1.5z"/>
+        <symbol id="icon-list" viewBox="0 0 48 48">
+            <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="4"><path fill="currentColor" d="M38 20H18v8h20zM32 6H18v8h14zm12 28H18v8h26z"/><path stroke-linecap="round" d="M17 10H5m12 14H5m12 14H5m0 6V4"/></g>
         </symbol>
     </svg>
 </template>
