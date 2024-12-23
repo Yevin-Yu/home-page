@@ -17,6 +17,7 @@ const { menus, currentMenuId } = storeToRefs(useMenusStore())
 /* 添加样式 */
 .aside {
     background-color: var(--bg-color-2);
+    height: 100%;
     width: 12rem;
     overflow: auto;
     border-right: 0.015rem solid var(--border--color-1);
