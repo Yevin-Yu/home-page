@@ -6,6 +6,12 @@ export default defineNuxtConfig({
       meta: [
         { name: 'description', content: '欢迎来到耶温的个人主页！这里是我分享作品、思考和技术的地方。我是一名前端开发，热爱探索钻研技术，并热衷于解决问题。' },
         { name: 'keywords', content: '耶温, 耶温博客,前端导航,前端分享,个人主页, 耶温个人主页, 前端开发, 前端开发个人主页' },
+      ],
+      script: [
+        {
+          src: 'https://tj.yuwb.cn/plugins/index.js?key=40YRQ0VYRVZZB2PA', // 这里是您 JS 文件的路径
+          defer: true // 可选，表示在文档解析完成后再执行
+        }
       ]
     }
   },
