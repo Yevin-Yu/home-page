@@ -85,7 +85,7 @@ const caseList = ref([
         introduction:
             "耶温导航：一个浏览器导航主页。包括：搜索，导航连接，待办，笔记，热点新闻。",
         tag: ["vue3", "vite"],
-        path: "https://yuwb.cn/nav",
+        path: "https://yuwb.cn/i/",
         github: "https://github.com/Yevin-Yu/easy-browser-home",
     },
     {

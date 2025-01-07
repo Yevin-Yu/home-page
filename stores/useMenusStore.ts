@@ -36,21 +36,24 @@ const menusaData = [
             icon: "#icon-html",
             type: 2,
             path: "/",
-          },
-          // {
-          //   id: 112,
-          //   name: "connect.html",
-          //   icon: "#icon-html",
-          //   type: 2,
-          //   path: "/connect",
-          // },
-          // {
-          //   id: 113,
-          //   name: "cv.md",
-          //   icon: "#icon-md",
-          //   type: 2,
-          //   path: "/cv",
-          // },
+          }
+        ],
+      },
+      {
+        id: 12,
+        name: "个人博客",
+        icon: "#icon-file",
+        activeIcon: "#icon-file-open",
+        type: 1,
+        expand: true,
+        child: [
+          {
+            id: 121,
+            name: "最新文章.md",
+            icon: "#icon-md",
+            type: 2,
+            path: "/boke",
+          }
         ],
       },
       {
